@@ -1,15 +1,6 @@
 // Write your Character component here
 import React from 'react'
-import styled from 'styled-components'
-
-const StyledCharacter = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    padding: 8px;
-    border-bottom: 2px solid #4f4f4f;
-    background-color: rgba(79,79,79,0.2);
-`
-
+import StyledCharacter from './StyledCharacter'
 
 export default function Character({ data }) {
     return (

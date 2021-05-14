@@ -12,12 +12,12 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  const [character, setCharacter] = useState([]);
+  const [characterInfo, setCharacterInfo] = useState([]);
 
   useEffect(() => {
     axios.get(BASE_URL)
-      .then((res) => {
-        setCharacter(res.data.results);
+      .then(res => {
+        setCharacterInfo(res.data.results);
       })
       .catch(err => {console.log('Error: failed to retrieve', err)})
   }, []);
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Star Wars Characters</h1>
-      {character.map(ele => {
+      {characterInfo.map(ele => {
         return <Character key = {ele.id} data ={ ele }/>
       })}
     </div>
