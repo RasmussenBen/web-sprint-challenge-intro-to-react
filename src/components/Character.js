@@ -2,9 +2,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Character(props) {
-    const { data } = props;
-    
+const StyledCharacter = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+    border-bottom: 2px solid #4f4f4f;
+    background-color: rgba(79,79,79,0.2);
+`
+
+
+export default function Character({ data }) {
     return (
         <StyledCharacter>
             <div className='characterName'>
